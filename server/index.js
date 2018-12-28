@@ -279,6 +279,21 @@
 const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => {
 
-app.listen(80, () => console.log('Example app listening on port 3000!'))
+    res.write(`
+      <html>
+      <head>
+      <title>哎呦，不错哦</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      </head>
+      <body style="text-align:center;line-height:500px">
+          Hello Server
+      </body>
+      </html>
+    `)
+    res.end()
+  // res.send('Hello World!')
+})
+//这里的端口，需要和浏览的端口一致 ，否则要配置端口的转发
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
