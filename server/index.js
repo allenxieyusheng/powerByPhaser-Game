@@ -295,5 +295,5 @@ app.get('/', (req, res) => {
     res.end()
   // res.send('Hello World!')
 })
-//这里的端口，需要和浏览的端口一致 ，否则要配置端口的转发
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+//这里的端口，需要和浏览的端口一致 ，否则要配置端口的转发, 测试环境这里的端口不能是80
+app.listen(80, () => console.log('Example app listening on port 80!'))
