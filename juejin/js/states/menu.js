@@ -31,7 +31,7 @@ function addMenu() {
     [  248, 1050, "好友排行", rank],
   ].map((btnConfig) => {
     // 调用 common 中的 addBtn 函数创建按钮
-    go.common.addBtn({
+    go.common.addBtn({ 
       x: btnConfig[0],
       y: btnConfig[1],
       text: btnConfig[2],
